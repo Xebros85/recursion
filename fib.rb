@@ -3,7 +3,7 @@
 def fibs(num)
   results = [0, 1, 1]
 
-  return 1 if num <= 2
+  return 1 if num <= 1
   first = 1
   second = 1
   
@@ -18,7 +18,7 @@ def fibs(num)
 end
 
 # Recursive Fibonacci Sequence
-def fibs_rec(num, results = [0, 1, 1])  
+def fibs_rec(num, results = [0, 1])  
   # Base Case
   return results if num <= 2
   
@@ -29,12 +29,12 @@ def fibs_rec(num, results = [0, 1, 1])
   fibs_rec(num - 1, results)
 end
 
-number = 10
+number = 8
 
 puts
 start_time = Time.now
 puts "Non-recursive Fibonacci sequence:"
-p fibs(number)
+p fibs(number - 1)
 puts " \t [#{( ( Time.now - start_time) * 1000.0 ).round(3)}ms]"
 
 puts
